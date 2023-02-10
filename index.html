@@ -47,20 +47,9 @@
 
 			<div class="my-carousel-thumbs" id="thumbs-container">
 				<div v-for="(slide, index) in slides" class="col thumb" :id="index">
-					<img src="./img/01.webp">
+					<img :src="slides[index].image">
 				</div>
-				<!-- <div class="col thumb">
-					<img src="./img/02.webp">
-				</div>
-				<div class="col thumb">
-					<img src="./img/03.webp">
-				</div>
-				<div class="col thumb">
-					<img src="./img/04.webp">
-				</div>
-				<div class="col thumb">
-					<img src="./img/05.webp">
-				</div>  -->
+
 			</div>
 		</div>
 
