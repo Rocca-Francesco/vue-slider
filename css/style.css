@@ -8,7 +8,7 @@ img {
 	object-fit: cover;
 }
 
-.my-carousel-container {
+#my-carousel-container {
 	height: 100vh;
 
 	display: flex;

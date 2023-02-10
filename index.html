@@ -31,77 +31,25 @@
 
 <body>
 
-	<div class="my-carousel-container">
+	<div id="my-carousel-container">
 		<div class="my-carousel">
 			<div class="my-carousel-main" id="slides-container">
-				{{ slidesEL }}
-				<!-- <div class="slide active">
-					<img src="./img/01.webp">
+
+				<div class="slide active">
+					<img :src="slides[thumbActive].image" alt="game">
 					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
+						<h2> {{ slides[thumbActive].title }} </h2>
+						<p> {{ slides[thumbActive].text }} </p>
 					</div>
 				</div>
 
-				<div class="slide">
-					<img src="./img/02.webp">
-					div.te
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div>
-
-				<div class="slide">
-					<img src="./img/03.webp">
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div>
-
-				<div class="slide">
-					<img src="./img/04.webp">
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div>
-
-				<div class="slide">
-					<img src="./img/05.webp">
-					<div class="slide-text">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum unde
-							laboriosam
-							molestiae.</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deserunt doloremque hic eaque
-							culpa
-							aspernatur.</p>
-					</div>
-				</div> -->
 			</div>
 
 			<div class="my-carousel-thumbs" id="thumbs-container">
-				<!-- <div class="col thumb">
+				<div v-for="(slide, index) in slides" class="col thumb" :id="index">
 					<img src="./img/01.webp">
 				</div>
-				<div class="col thumb">
+				<!-- <div class="col thumb">
 					<img src="./img/02.webp">
 				</div>
 				<div class="col thumb">
@@ -112,11 +60,11 @@
 				</div>
 				<div class="col thumb">
 					<img src="./img/05.webp">
-				</div> -->
+				</div>  -->
 			</div>
 		</div>
 
-		<div class="my-carousel-controls">
+		<!-- <div class="my-carousel-controls">
 
 			<button class="btn btn-outline-dark" id="prev">
 				<i class="fa-solid fa-chevron-left"></i>
@@ -133,7 +81,7 @@
 			<button class="btn btn-outline-dark" id="next">
 				<i class="fa-solid fa-chevron-right"></i>
 			</button>
-		</div>
+		</div> -->
 	</div>
 
 
