@@ -37,18 +37,29 @@ createApp({
     },
 
     methods: {
-
-        createSmallSlide(index) {
-            for (let i = 0; i < this.slides.length; i++) {
-                const slide = `
-					<img src="./${slides[index].image}">
-					<div class="slide-text">
-						<h2>${slides.title[index]}</h2>
-						<p>${slides.text[index]}</p>
-					</div>
-			` ;
+        prevImage() {
+            if (this.thumbActive - 1 < 0) {
+                this.thumbActive = this.slides.length - 1;
+            } else {
+                this.thumbActive--;
             }
         },
+        nextImage() {
+            this.thumbActive++;
+        },
+
+        nextImage() {
+            if ((this.thumbActive + 1) > (this.slides.length - 1)) {
+                this.thumbActive = 0;
+            } else {
+                this.thumbActive++;
+            }
+        },
+
+        showMain(index) {
+            this.thumbActive = index;
+        }
+
     },
 }).mount('#my-carousel-container')
 
